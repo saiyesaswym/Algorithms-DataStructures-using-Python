@@ -22,8 +22,6 @@ def bracketsChecker(expr):
 def matches(open, close):
     opens = "[{("
     closers = "]})"
-    print(opens.find(open))
-    print(closers.find(close))
     return opens.find(open) == closers.find(close)
 
 val = input("Enter an expression: ")
