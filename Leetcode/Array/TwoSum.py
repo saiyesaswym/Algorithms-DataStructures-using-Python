@@ -15,3 +15,47 @@ nums = [2,7,11,15]
 target = 9
 
 print(twoSum(nums, target))
+
+
+"""
+First approach: Two-pass Hash Table
+Time complexity: O(n) - Hashtable has lookup time of O(1)
+Space complexity: O(n)
+"""
+
+def twoSum_hash1(nums: list[int], target: int):
+    hashmap = {}
+    for i,j in enumerate(nums):
+        hashmap[j]=i
+
+    for i in range(len(nums)):
+        complement = target - nums[i]
+        if(complement in hashmap.keys() and hashmap[complement]!=i):
+            return [i, hashmap[complement]]
+
+
+nums = [2,7,11,15]
+target = 9
+
+print(twoSum_hash1(nums,target))
+
+
+"""
+First approach: One-pass Hash Table
+Time complexity: O(n) - Hashtable has lookup time of O(1)
+Space complexity: O(n)
+"""
+
+def twoSum_hash2(nums: list[int], target: int):
+    hashmap = {}
+
+    for i in range(len(nums)):
+        complement = target - nums[i]
+        if(complement in hashmap.keys()):
+            return [hashmap[complement], i]
+        hashmap[nums[i]] = i
+
+nums = [2,7,11,15]
+target = 9
+
+print(twoSum_hash2(nums,target))
