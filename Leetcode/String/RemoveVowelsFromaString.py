@@ -7,8 +7,11 @@ Faster than 78.99%
 """
 def removeVowels(s: str) -> str:
     vowels = {'a','e','i','o','u'}
-    ans=''
+    ans=[]
     for i in s:
         if i not in vowels:
-            ans+=i
-    return ans
+            ans.append(i)
+    return ''.join(ans)
+
+s = "leetcodeisacommunityforcoders"
+print(removeVowels(s))
