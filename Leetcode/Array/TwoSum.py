@@ -41,7 +41,7 @@ print(twoSum_hash1(nums,target))
 
 
 """
-First approach: One-pass Hash Table
+Third approach: One-pass Hash Table
 Time complexity: O(n) - Hashtable has lookup time of O(1)
 Space complexity: O(n)
 """
