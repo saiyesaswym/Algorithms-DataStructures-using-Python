@@ -1,7 +1,8 @@
 """
 SelectionSort
+Locate the largest element in each pass and put it at the end of list
 Same as Bubblesort, but only one exchange is made for every pass
-So, it is faster than bubbleSort
+So, it is little faster than bubbleSort
 Time complexity: O(n2)
 Space complexity: O(1)
 """

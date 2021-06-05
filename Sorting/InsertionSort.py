@@ -2,7 +2,7 @@
 InsertionSort
 It always maintains a sorted sublist in the lower positions of list.
 Each item is inserted into sublist one by one.
-Time complexity: O(n2)
+Time complexity: Avg/Worst - O(n2), Best - O(n)
 Space complexity: O(1)
 """
 
