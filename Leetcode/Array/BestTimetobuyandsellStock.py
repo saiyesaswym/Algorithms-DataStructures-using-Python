@@ -15,3 +15,23 @@ def maxProfit(prices: List[int]) -> int:
             max_profit = i-min_price
 
     return max_profit
+
+
+"""
+Two pointer Approach
+Increment left pointer to minimum values, updating the profit wherever possible
+Time complexity: O(n)
+Space complexity: O(1)
+"""
+def maxProfit(self, prices: List[int]) -> int:
+    i=0
+    j=1
+    profit=0
+    while j<len(prices):
+        if prices[i]>prices[j]:
+            i=j
+            j+=1
+        else:
+            profit = max(profit, prices[j]-prices[i])
+            j+=1
+    return profit

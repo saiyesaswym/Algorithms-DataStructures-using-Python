@@ -19,6 +19,7 @@ def mergeSort(arr):
         j=0
         k=0
         while i<len(L) and j<len(R):
+            #Equal operation here helps with Stability
             if L[i] <= R[j]:
                 arr[k] = L[i]
                 i+=1
@@ -36,6 +37,8 @@ def mergeSort(arr):
             arr[k] = R[j]
             j+=1
             k+=1
+
+    return arr
 
 n = int(input("Enter number of elements: "))
 lis = []
