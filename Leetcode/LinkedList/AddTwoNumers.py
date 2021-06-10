@@ -1,12 +1,9 @@
+import ListNode
+
 """
 Create numbers from input linked lists
 Create linked list from sum number
 """
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-
 def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
     n1=0
     m=1
@@ -40,7 +37,6 @@ def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
 
 """
 Concise version of above approach
-
 """
 def addTwoNumbers(self, l1, l2):
     """
