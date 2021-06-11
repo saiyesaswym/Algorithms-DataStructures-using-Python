@@ -14,7 +14,7 @@ class unorderedList:
     def isEmpty(self):
         return self.head == None
 
-    def add(self, item):
+    def insert_at_start(self, item):
         """
         New node is added at the head of list
         Create a new node object and assign existing head as next to it
@@ -23,6 +23,20 @@ class unorderedList:
         temp = Node(item)
         temp.setNext(self.head)
         self.head = temp
+
+    def insert_at_end(self, item):
+        """
+        Insert new node at the end of list
+        """
+        new_node = Node(item)
+        if self.head is None:
+            self.head = new_node
+            return
+        else:
+            n = self.head
+            while n.getNext() is not None:
+                n = n.getNext()
+            n.setNext(new_node)
 
     def length(self):
         """
@@ -50,6 +64,19 @@ class unorderedList:
 
         return found
 
+    def traverse(self):
+        """
+        Traverse the list and print all the items
+        """
+        if self.head is None:
+            print("List has no elements")
+            return
+        else:
+            n = self.head
+            while n is not None:
+                print(n.getData())
+                n = n.getNext()
+
     def remove(self, item):
         """
         Traverse the list, look for the item
@@ -69,3 +96,19 @@ class unorderedList:
             self.head = current.getNext()
         else:
             previous.setNext(current.getNext())
+
+    def reverse(self):
+        """
+        Traverse through the list and reverse the assignment using three variables
+        n -> current
+        prev -> previous node
+        next -> next node
+        """
+        prev = None
+        n = self.head
+        while n is not None:
+            next = n.getNext()
+            n.setNext(prev)
+            prev = n
+            n = next
+        self.head = prev

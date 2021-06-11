@@ -1,5 +1,9 @@
 """
 Dutch National Flag problem - One Pass solution
+Three pointer Approach
+p0 -> last zero
+p2 -> first 2
+curr -> current item
 Time complexity: O(N)
 Space complexity: O(1)
 """
