@@ -1,4 +1,3 @@
-
 """
 Two Pointer Approach
 Since the input array is Sorted
