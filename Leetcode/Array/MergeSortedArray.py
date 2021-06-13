@@ -1,7 +1,7 @@
 """
 Three pointer Approach
 Using the extra space in nums1 and merging in place
-Time complexity: O(n)
+Time complexity: O(n+m)
 Space complexity: O(1)
 """
 def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
