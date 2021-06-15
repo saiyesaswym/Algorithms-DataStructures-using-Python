@@ -1,7 +1,7 @@
 """
 Recursion approach - General template
 Time Complexity - O(2^n * n)
-Space Complexity - O(2^n)
+Space Complexity - O(2^n * n)
 """
 class Solution:
     def __init__(self):

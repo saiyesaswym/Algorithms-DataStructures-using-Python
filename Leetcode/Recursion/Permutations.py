@@ -25,6 +25,8 @@ print(sol.permute([1,2,3]))
 
 """
 Recursive approach - Size of subproblem is represented by index
+Time complexity: O(n! * n)
+Space complexity: O(n! * n)
 """
 class Solution2:
     def permute(self, nums: List[int]) -> List[List[int]]:
