@@ -6,7 +6,7 @@ class TreeNode:
         self.right = right
 
 
-def levelOrder(self, root: TreeNode) -> List[List[int]]:
+def levelOrder(root: TreeNode):
     final_result=[]
     if not root:
         return final_result
@@ -22,7 +22,3 @@ def levelOrder(self, root: TreeNode) -> List[List[int]]:
         if node.right is not None:
             q.append(node.right)
     return final_result
-
-
-root = [3,9,20,null,null,15,7]
-print(levelOrder(root))

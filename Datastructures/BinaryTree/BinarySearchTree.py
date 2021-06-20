@@ -51,7 +51,7 @@ def search_node(root, val):
     while curr is not None:
         if val == curr.data:
             print("Found")
-            return curr.data
+            return curr
         elif val<curr.data:
             curr = curr.leftNode
         else:
@@ -94,7 +94,7 @@ def find_max_node(root):
     return curr.data
 
 
-def find_successor(root, node):
+def find_successor(root, val):
     """
     Min value of subtree, if given node has right subtree
     Parent is the successor, if given node is the left child
@@ -102,6 +102,9 @@ def find_successor(root, node):
     """
     if root is None:
         return None
+
+    #Given value of node, find node using search_node
+    node = search_node(root, val)
 
     #If given node has a right subtree
     if node.rightNode:
@@ -121,7 +124,9 @@ def find_successor(root, node):
         else:
             curr = curr.rightNode
 
-    return ancestor
+    return ancestor.data
+
+
 
 
 
@@ -138,3 +143,8 @@ print(find_min_node(root))
 print(find_max_node(root))
 print(search_node(root,14))
 print(search_node(root,22))
+
+print("successor to 14:")
+print(find_successor(root,14))
+print("successor to 20:")
+print(find_successor(root,20))
