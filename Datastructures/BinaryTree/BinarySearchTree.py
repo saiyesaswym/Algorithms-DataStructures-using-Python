@@ -1,12 +1,17 @@
 
 class Binary_Search_Tree:
-
     def __init__(self, data=None):
         self.data = data
         self.leftNode = None
         self.rightNode = None
 
+
 def insert_node(root, val):
+    """
+    Given the root node and key to insert
+    Traverse the tree and find the position for new node
+    Insert the new node to left/right of last found node
+    """
     new_node = Binary_Search_Tree(val)
 
     if root is None:
@@ -33,6 +38,11 @@ def insert_node(root, val):
 
 
 def search_node(root, val):
+    """
+    Given the root node and key to find
+    Traverse the left or right subtree
+    by comparing elements with the given key
+    """
     if root.data is None:
         return None
 
@@ -49,7 +59,13 @@ def search_node(root, val):
     print("Not found")
     return None
 
+
 def find_min_node(root):
+    """
+    Given the root node of a tree, find the min node
+    Min node is the left most node
+    which doesn't have any left nodes
+    """
     if root is None:
         return None
 
@@ -60,7 +76,13 @@ def find_min_node(root):
 
     return curr.data
 
+
 def find_max_node(root):
+    """
+    Given the root node of a tree, find the max node
+    Max node is the right most node
+    which doesn't have any right nodes
+    """
     if root is None:
         return None
 
@@ -70,6 +92,38 @@ def find_max_node(root):
         curr = curr.rightNode
 
     return curr.data
+
+
+def find_successor(root, node):
+    """
+    Min value of subtree, if given node has right subtree
+    Parent is the successor, if given node is the left child
+    Right ancestor up the tree, if given node is the right child
+    """
+    if root is None:
+        return None
+
+    #If given node has a right subtree
+    if node.rightNode:
+        curr = node
+        while curr.leftNode is not None:
+            curr = curr.leftNode
+        return curr
+
+    #Start at root and traverse until given node
+    ancestor = None
+    curr = root
+    while curr.data != node.data:
+        #Store the last left parent into ancestor
+        if node.data < curr.data:
+            ancestor = curr
+            curr = curr.leftNode
+        else:
+            curr = curr.rightNode
+
+    return ancestor
+
+
 
 root = insert_node(None,15)
 insert_node(root,10)
