@@ -1,4 +1,7 @@
-
+"""
+Time complexity: O(n)
+Space complexity: O(logn) - Since it is a Balanced binary tree - Call stack takes height of the tree
+"""
 def sortedArrayToBST(self, nums: List[int]) -> TreeNode:
     def helper(arr, root):
         if not arr or len(arr)==1:

@@ -1,4 +1,7 @@
-
+"""
+Time complexity: O(n) - visiting each node once
+Space complexity: O(h)
+"""
 def maxDepth(self, root: 'Node') -> int:
     if not root:
         return 0

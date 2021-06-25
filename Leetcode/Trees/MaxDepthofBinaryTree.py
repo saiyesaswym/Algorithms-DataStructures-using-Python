@@ -1,6 +1,6 @@
 """
 Time complexity: O(n) - visiting each node once
-Space complexity: O(logn)
+Space complexity: O(h)
 """
 def maxDepth(self, root: TreeNode) -> int:
     if not root:
@@ -27,7 +27,7 @@ def maxDepth(self, root: TreeNode) -> int:
 
 """
 Time complexity: O(n) - visiting each node once
-Space complexity: O(logn)
+Space complexity: O(h)
 """
 def maxDepth(self, root: TreeNode) -> int:
     if not root:
