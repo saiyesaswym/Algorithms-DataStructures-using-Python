@@ -11,7 +11,27 @@ def fib(self, n: int) -> int:
 
 
 """
-Iterative approach - Memoization (Dynamic programming)
+BottomUp approach - Memoization (Dynamic programming)
+Time complexity: O(n)
+Space complexity: O(n)
+"""
+def fib(self, n: int) -> int:
+    if n<=1:
+        return n
+    self.memo = {0:0, 1:1}
+    return self.memoize(n)
+
+def memoize(self, n):
+    if n in self.memo:
+        return self.memo[n]
+
+    self.memo[n] = self.memoize(n-1) + self.memoize(n-2)
+
+    return self.memo[n]
+
+
+"""
+BottomUp approach - Memoization (Dynamic programming)
 Time complexity: O(n)
 Space complexity: O(n)
 """
@@ -28,7 +48,7 @@ def fib(self, n: int) -> int:
 
 """
 Optimized Recursive approach
-Time complexity: O(n) 
+Time complexity: O(n)
 Space complexity: O(1)
 """
 def fib(self, n: int) -> int:
