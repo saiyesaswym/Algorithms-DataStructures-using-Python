@@ -1,6 +1,6 @@
 """
 BottomUp iterative approach - Memoization
-Time complexity: O(k^2)
+Time complexity: O(k^2) - k-> # of rows in the pascal triangle
 Space complexity: O(n)
 """
 def generate(self, numRows: int) -> List[List[int]]:
