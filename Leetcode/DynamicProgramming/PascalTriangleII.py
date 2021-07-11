@@ -1,5 +1,5 @@
 """
-BottomUp iterative approach - Memoization
+BottomUp iterative approach - Tabulation
 Time complexity: O(k^2)
 Space complexity: O(n)
 """

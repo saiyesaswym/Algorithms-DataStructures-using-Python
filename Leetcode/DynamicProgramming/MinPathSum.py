@@ -1,5 +1,5 @@
 """
-BottomUp - Iterative approach - Memoization - Optimized approach
+BottomUp - Iterative approach - Tabulation - Optimized approach
 minsum(i,j) = min(minsum(i-1,j), minsum(i,j-1)) + value(i,j)
 Time complexity: O(m*n)
 Space complexity: O(1)

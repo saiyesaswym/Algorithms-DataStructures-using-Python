@@ -1,5 +1,5 @@
 """
-BottomUp iterative approach - Memoization
+BottomUp iterative approach - Tabulation
 Time complexity: O(k^2) - k-> # of rows in the given triangle
 Space complexity: O(1)
 """

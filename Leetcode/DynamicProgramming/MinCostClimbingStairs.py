@@ -1,5 +1,5 @@
 """
-BottomUp - Iterative approach - Memoization
+BottomUp - Iterative approach - Tabulation
 No. of ways he can reach nth step: f(n-1)+f(n-2) -> Fibonacci sequence
 Time complexity: O(n)
 Space complexity: O(n)

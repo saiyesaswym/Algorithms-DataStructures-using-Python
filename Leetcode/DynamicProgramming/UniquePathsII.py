@@ -1,5 +1,5 @@
 """
-BottomUp - Iterative approach - Memoization
+BottomUp - Iterative approach - Tabulation
 ways(i,j) = ways(i-1,j) + ways(i,j-1))
 Time complexity: O(m*n)
 Space complexity: O(m*n)
@@ -39,7 +39,7 @@ def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
 
 
 """
-BottomUp - Iterative approach - Memoization - Optimized
+BottomUp - Iterative approach - Tabulation - Optimized
 ways(i,j) = ways(i-1,j) + ways(i,j-1))
 Time complexity: O(m*n)
 Space complexity: O(1)

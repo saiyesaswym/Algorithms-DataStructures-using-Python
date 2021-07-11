@@ -1,5 +1,5 @@
 """
-BottomUp - Iterate approach - Memoization - Optimzed
+BottomUp - Iterate approach - Tabulation - Optimzed
 Time complexity: O(n)
 Space complexity: O(1)
 """

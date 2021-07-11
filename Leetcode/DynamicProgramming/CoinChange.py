@@ -1,5 +1,5 @@
 """
-BottomUp - Iterative approach - Memoization
+BottomUp - Iterative approach - Tabulation
 Time complexity: O(a*k) - amount * noOfCoins
 Space complexity: O(a)
 """
