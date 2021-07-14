@@ -1,4 +1,8 @@
-
+"""
+BottomUp iterative approach - Tabulation
+Time complexity: O(n)
+Space complexity: O(1)
+"""
 def rob(self, nums: List[int]) -> int:
 
     #EdgeCase
