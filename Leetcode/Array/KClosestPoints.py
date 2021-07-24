@@ -1,6 +1,6 @@
 """
 Use Minheap as Priority Queue
-Time complexity: O(n)
+Time complexity: O(nlogn)
 Space complexity: O(n)
 """
 def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
