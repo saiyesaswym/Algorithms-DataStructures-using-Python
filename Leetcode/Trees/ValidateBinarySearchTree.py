@@ -2,6 +2,8 @@ from BinaryTree import TreeNode
 
 """
 Recursive travel with valid range
+Time complexity: O(n)
+Space complexity: O(n)
 """
 def isValidBST(root:TreeNode) -> bool:
 

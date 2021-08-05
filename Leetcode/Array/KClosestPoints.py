@@ -15,3 +15,12 @@ def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
         k-=1
 
     return out
+
+
+"""
+Sort the array by (x2-0)^2 + (y2-0)^2
+TIme complexity: O(nlogn)
+Space complexity: O(1)
+"""
+def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
+    return sorted(points, key=lambda x:x[0]*x[0]+x[1]*x[1])[:k]

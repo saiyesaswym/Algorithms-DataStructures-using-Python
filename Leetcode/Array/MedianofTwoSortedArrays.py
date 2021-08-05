@@ -29,3 +29,9 @@ def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         return (res[(l//2)-1] + res[l//2])/2
     else:
         return res[l//2]
+
+
+"""
+Binary Search
+Split both arrays such that left<right - Find the index to split
+"""
