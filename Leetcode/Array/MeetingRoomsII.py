@@ -8,13 +8,13 @@ import heapq
 
 def minMeetingRooms(self, intervals: List[List[int]]) -> int:
     intervals.sort()
-    free_rooms=[]
-    heapq.heappush(free_rooms, intervals[0][1])
+    used_rooms=[]
+    heapq.heappush(used_rooms, intervals[0][1])
     for i in range(1,len(intervals)):
-        if free_rooms[0]<=intervals[i][0]:
-            heapq.heappop(free_rooms)
-        heapq.heappush(free_rooms, intervals[i][1])
-    return len(free_rooms)
+        if used_rooms[0]<=intervals[i][0]:
+            heapq.heappop(used_rooms)
+        heapq.heappush(used_rooms, intervals[i][1])
+    return len(used_rooms)
 
 
 """

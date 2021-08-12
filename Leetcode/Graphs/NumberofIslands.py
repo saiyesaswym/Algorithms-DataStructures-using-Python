@@ -1,6 +1,8 @@
 from collections import deque
 """
 Using BFS
+Time complexity: O(m*n)
+Space complexity: O(m*n)
 """
 def numIslands(self, grid: List[List[str]]) -> int:
 
@@ -49,6 +51,8 @@ def numIslands(self, grid: List[List[str]]) -> int:
 """
 BFS - Optimized Approach
 Use grid to mark visited nodes, saves visited array space
+Time complexity: O(m*n)
+Space complexity: O(min(m,n)) - https://imgur.com/gallery/M58OKvB
 """
 def numIslands(self, grid: List[List[str]]) -> int:
 
@@ -95,6 +99,8 @@ def numIslands(self, grid: List[List[str]]) -> int:
 
 """
 Using DFS
+Time complexity: O(m*n)
+Space complexity: O(m*n) - if grid is filled with lands
 """
 def numIslands(self, grid: List[List[str]]) -> int:
 
